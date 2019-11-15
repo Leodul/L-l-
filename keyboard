@@ -1,0 +1,8 @@
+git clone https://github.com/tuxedocomputers/tuxedo-keyboard.git
+cd tuxedo-keyboard
+make clean
+sudo -i
+cp -R . /usr/src/tuxedo_keyboard-1
+dkms add -m tuxedo_keyboard -v 1
+dkms install -m tuxedo_keyboard -v 1
+echo tuxedo_keyboard >> /etc/modules
